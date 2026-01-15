@@ -10,3 +10,15 @@
 [debug] [2026-01-15T12:17:03.508Z] > authorizing via signed-in user (easylive1989@gmail.com)
 [debug] [2026-01-15T12:17:03.508Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2026-01-15T12:17:03.508Z] > authorizing via signed-in user (easylive1989@gmail.com)
+[debug] [2026-01-15T12:54:39.544Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T12:54:39.545Z] > authorizing via signed-in user (easylive1989@gmail.com)
+[debug] [2026-01-15T12:54:39.551Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T12:54:39.552Z] > authorizing via signed-in user (easylive1989@gmail.com)
+[debug] [2026-01-15T12:54:39.601Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T12:54:39.601Z] > authorizing via signed-in user (easylive1989@gmail.com)
+[debug] [2026-01-15T12:54:39.602Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T12:54:39.602Z] > authorizing via signed-in user (easylive1989@gmail.com)
+[debug] [2026-01-15T12:54:39.617Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T12:54:39.618Z] > authorizing via signed-in user (easylive1989@gmail.com)
+[debug] [2026-01-15T12:54:39.618Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T12:54:39.618Z] > authorizing via signed-in user (easylive1989@gmail.com)
