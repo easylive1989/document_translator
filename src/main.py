@@ -1,4 +1,9 @@
 import os
+import sys
+
+# Ensure project root is in sys.path so imports starting with 'src.' work
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import typer
 from typing import Optional
 from rich.console import Console
@@ -57,22 +62,21 @@ def translate(
     output_file = None
 
     try:
-        with console.status("[bold green]Processing...[/bold green]", spinner="dots"):
-            if ext == ".md":
-                from src.handlers.markdown import MarkdownHandler
-                handler = MarkdownHandler(client, target_lang)
-                output_file = handler.process(filename)
-            elif ext == ".docx":
-                from src.handlers.docx import DocxHandler
-                handler = DocxHandler(client, target_lang)
-                output_file = handler.process(filename)
-            elif ext == ".pdf":
-                from src.handlers.pdf import PdfHandler
-                handler = PdfHandler(client, target_lang)
-                output_file = handler.process(filename)
-            else:
-                console.print(f"[bold red]Error: Unsupported file format '{ext}'. Supported formats: .md, .docx, .pdf[/bold red]")
-                raise typer.Exit(code=1)
+        if ext == ".md":
+            from src.handlers.markdown import MarkdownHandler
+            handler = MarkdownHandler(client, target_lang)
+            output_file = handler.process(filename)
+        elif ext == ".docx":
+            from src.handlers.docx import DocxHandler
+            handler = DocxHandler(client, target_lang)
+            output_file = handler.process(filename)
+        elif ext == ".pdf":
+            from src.handlers.pdf import PdfHandler
+            handler = PdfHandler(client, target_lang)
+            output_file = handler.process(filename)
+        else:
+            console.print(f"[bold red]Error: Unsupported file format '{ext}'. Supported formats: .md, .docx, .pdf[/bold red]")
+            raise typer.Exit(code=1)
 
         if output_file:
              console.print(f"[bold green]Translation completed successfully![/bold green]")

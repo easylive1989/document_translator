@@ -19,17 +19,17 @@ class GeminiClient:
 
         # Map friendly names to actual model names
         self.model_map = {
-            "flash": "gemini-1.5-flash",
-            "pro": "gemini-1.5-pro"
+            "flash": "gemini-2.0-flash",
+            "pro": "gemini-2.5-pro"
         }
 
-        target_model = self.model_map.get(model_name.lower(), "gemini-1.5-flash")
+        target_model = self.model_map.get(model_name.lower(), model_name)
         self.model = genai.GenerativeModel(target_model)
 
     @retry(
         retry=retry_if_exception_type((ResourceExhausted, ServiceUnavailable)),
-        wait=wait_exponential(multiplier=1, min=2, max=60),
-        stop=stop_after_attempt(5)
+        wait=wait_exponential(multiplier=2, min=4, max=60),
+        stop=stop_after_attempt(20)
     )
     def translate_text(self, text: str, target_lang: str = "Traditional Chinese") -> str:
         """
